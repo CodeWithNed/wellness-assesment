@@ -127,13 +127,13 @@ export const ResultsView: React.FC<Props> = ({ results }) => {
             Connect with me:
           </p>
           <div className="flex justify-center space-x-4">
-            <a href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener noreferrer" className="dark:text-green-400 text-purple-600 hover:opacity-80">
+            <a href="https://github.com/CodeWithNed" target="_blank" rel="noopener noreferrer" className="dark:text-green-400 text-purple-600 hover:opacity-80">
               GitHub
             </a>
-            <a href="https://www.linkedin.com/in/YOUR_USERNAME" target="_blank" rel="noopener noreferrer" className="dark:text-green-400 text-purple-600 hover:opacity-80">
+            <a href="https://www.linkedin.com/in/nadun-kumarasinghe-448b691a9/" target="_blank" rel="noopener noreferrer" className="dark:text-green-400 text-purple-600 hover:opacity-80">
               LinkedIn
             </a>
-            <a href="https://www.buymeacoffee.com/YOUR_USERNAME" target="_blank" rel="noopener noreferrer" className="dark:text-green-400 text-purple-600 hover:opacity-80">
+            <a href="https://www.buymeacoffee.com/NadunKumarasinghe" target="_blank" rel="noopener noreferrer" className="dark:text-green-400 text-purple-600 hover:opacity-80">
               Buy Me A Coffee
             </a>
           </div>
