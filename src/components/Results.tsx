@@ -9,9 +9,9 @@ import {
   Legend
 } from 'chart.js';
 import { Radar } from 'react-chartjs-2';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 import { Download } from 'lucide-react';
-import { Results, Category } from '../types';
-import { categoryColors, getGenderSpecificInsights } from '../data';
+import { Results } from '../types';
 import { useTheme } from '../context/ThemeContext';
 
 ChartJS.register(
@@ -20,6 +20,8 @@ ChartJS.register(
   LineElement,
   Filler,
   Tooltip,
+  Legend,
+  ChartDataLabels
 );
 
 type Props = {
@@ -89,6 +91,16 @@ export const ResultsView: React.FC<Props> = ({ results }) => {
         callbacks: {
           label: (context: any) => `Score: ${context.raw.toFixed(1)}`
         }
+      },
+      datalabels: {
+        color: theme === 'dark' ? 'rgba(255, 255, 255, 0.9)' : 'rgba(0, 0, 0, 0.9)',
+        font: {
+          size: 12,
+          weight: 'bold' as const
+        },
+        formatter: (value: number) => `${(value * 20).toFixed(0)}%`, // Assuming 5 is 100%
+        anchor: 'end',
+        align: 'end'
       }
     }
   };
